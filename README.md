@@ -1,2 +1,3 @@
-# xmake-template
-My xmake project template
+# vtask
+
+vtask is my general task management library on top of taskflow. (WIP)
