@@ -1,5 +1,5 @@
 -- set project name
-set_project("PROJECT_NAME")
+set_project("VTask")
 
 -- set project version
 set_version("0.1.0")
@@ -13,16 +13,16 @@ set_config("root", is_root)
 set_config("project_dir", os.scriptdir())
 
 -- global options
-option("PROJECT_NAME_build_examples") -- build examples?
+option("vtask_build_examples") -- build examples?
     set_default(true)
     set_showmenu(true)
-    set_description("Enable PROJECT_NAME examples")
+    set_description("Enable vtask examples")
 option_end()
 
-option("PROJECT_NAME_build_tests") -- build tests?
+option("vtask_build_tests") -- build tests?
     set_default(true)
     set_showmenu(true)
-    set_description("Enable PROJECT_NAME tests")
+    set_description("Enable vtask tests")
 option_end()
 
 -- if build on windows
@@ -67,11 +67,11 @@ includes("external")
 includes("source")
 
 -- include tests
-if has_config("PROJECT_NAME_build_tests") then
+if has_config("vtask_build_tests") then
     includes("tests")
 end
 
 -- if build examples, then include examples
-if has_config("PROJECT_NAME_build_examples") then
+if has_config("vtask_build_examples") then
     includes("examples")
 end
