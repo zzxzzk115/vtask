@@ -1,4 +1,4 @@
-add_requires("taskflow v3.11.0")
+add_requires("enkits")
 
 target("vtask")
 	set_kind("static")
@@ -8,7 +8,9 @@ target("vtask")
 
 	add_files("src/**.cpp")
 
-	add_packages("taskflow")
+	add_deps("vbase", {public = true})
+
+	add_packages("enkits") -- private dependency, not exposed to users
 
 	-- set target directory
     set_targetdir("$(builddir)/$(plat)/$(arch)/$(mode)/vtask")

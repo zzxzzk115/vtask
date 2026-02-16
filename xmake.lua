@@ -9,20 +9,14 @@ set_languages("cxx23")
 
 -- root ?
 local is_root = (os.projectdir() == os.scriptdir())
-set_config("root", is_root)
-set_config("project_dir", os.scriptdir())
+set_config("vtask_root", is_root)
+set_config("vtask_project_dir", os.scriptdir())
 
 -- global options
 option("vtask_build_examples") -- build examples?
     set_default(true)
     set_showmenu(true)
     set_description("Enable vtask examples")
-option_end()
-
-option("vtask_build_tests") -- build tests?
-    set_default(true)
-    set_showmenu(true)
-    set_description("Enable vtask tests")
 option_end()
 
 -- if build on windows
@@ -65,11 +59,6 @@ includes("external")
 
 -- include source
 includes("source")
-
--- include tests
-if has_config("vtask_build_tests") then
-    includes("tests")
-end
 
 -- if build examples, then include examples
 if has_config("vtask_build_examples") then

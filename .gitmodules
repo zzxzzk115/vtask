@@ -1,0 +1,3 @@
+[submodule "external/vbase"]
+	path = external/vbase
+	url = https://github.com/zzxzzk115/vbase.git
