@@ -3,7 +3,7 @@
 
 #include "vtask/scheduler.hpp"
 
-#include <enkits/TaskScheduler.h>
+#include <enkiTS/TaskScheduler.h>
 
 #include <algorithm>
 #include <thread>

@@ -3,7 +3,7 @@
 
 #include "vtask/pinned_task.hpp"
 
-#include <enkits/TaskScheduler.h>
+#include <enkiTS/TaskScheduler.h>
 #include <vector>
 
 namespace vtask
