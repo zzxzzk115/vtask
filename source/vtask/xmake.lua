@@ -1,4 +1,5 @@
 add_requires("enkits")
+add_requires("vbase")
 
 target("vtask")
 	set_kind("static")
@@ -8,7 +9,7 @@ target("vtask")
 
 	add_files("src/**.cpp")
 
-	add_deps("vbase", {public = true})
+	add_packages("vbase", {public = true}) -- consumed from xmake-repo (was add_deps in workspace builds)
 
 	add_packages("enkits") -- private dependency, not exposed to users
 
